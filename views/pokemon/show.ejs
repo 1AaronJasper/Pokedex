@@ -1,0 +1,27 @@
+
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <tbody>
+        <h1><%=Pokemon.name%></h1>
+        <h1><img src="<%=Pokemon.img%>"></h1>
+            <h1>Id: <%=Pokemon.id%></h1>
+            <h1>Type: <%=Pokemon.type%></h1>
+            <h1>HP: <%=Pokemon.stats.hp%></h1>
+            <h1>Attack: <%=Pokemon.stats.attack%></h1>
+            <h1>Defense: <%=Pokemon.stats.defense%></h1>
+    </tbody>
+    <a href="/pokemon/edit/<%=Pokemon.id%>"><button>Edit Poke</button></a>
+
+    <form action="/pokemon/<%=Pokemon.id%>?_method=DELETE" method="POST">
+
+        <a href="/pokemon/<%=Pokemon.id%>"><button >Delete Poke</button></a>
+    </form>
+</body>
+</html>

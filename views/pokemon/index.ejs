@@ -1,0 +1,24 @@
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+</head>
+<body>
+    <tbody>
+      <a href="/pokemon/new">
+        <button >Add a Pokemon</button></a>
+        <% Pokemon.forEach(function(Pokemon, i) { %>
+        <tr>
+                  <a href="/pokemon/<%=Pokemon.id%>"><img src="<%=Pokemon.img%>"></a>
+                  <a href="/pokemon/<%=Pokemon.id%>"><%=Pokemon.name%></a>
+                </td>
+              </td>    
+            <% }) %>
+      </tr>
+      
+    </tbody>
+</body>
+</html>
