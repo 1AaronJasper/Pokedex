@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/style.css">
+<div class="header">
+    <h1>Pokedex</h1>
+    <h1>Edit Your Pokemon</h1>
+</div>
+<div id="form"></div>
+<form action="/pokemon/<%=index%>?_method=PUT" method="POST" class="form">
+
+    <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>" class="pokemon-image">
+
+    <label for="name" class="label">Name</label>
+    <input type="text" name="name" placeholder="pokemon name" value="<%=pokemon.name%>" class="input"> <br>
+
+    <label for="type" class="label">Types</label>
+    <input type="text" name="type" placeholder="pokemon type" value="<%=pokemon.type.join(' ,  ')%>" class="input"> <br>
+
+    <label for="hp" class="label">HP</label>
+    <input type="text" name="hp" placeholder="pokemon hp" value="<%=pokemon.stats.hp%>" class="input"> <br>
+
+    <label for="attack" class="label">Attack</label>
+    <input type="text" name="attack" placeholder="pokemon attack" value="<%=pokemon.stats.attack%>" class="input"> <br>
+
+    <label for="defense" class="label">Defense</label>
+    <input type="text" name="defense" placeholder="pokemon defense" value="<%=pokemon.stats.defense%>"class="input"> <br>
+
+    <label for="img" class="label">Image URL</label>
+    <input type="text" name="img" placeholder="pokemon image URL" value="<%= pokemon.img %>" class="input"> <br>
+
+    <input type="submit" value="Edit Pokemon" class="submit">
+
+</form>
+
+<a href="/pokemon"><button>back</button></a>
+</div>

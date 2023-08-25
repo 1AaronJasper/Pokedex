@@ -1,27 +1,21 @@
 
-   
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-</head>
-<body>
-    <tbody>
-        <h1><%=Pokemon.name%></h1>
-        <h1><img src="<%=Pokemon.img%>"></h1>
-            <h1>Id: <%=Pokemon.id%></h1>
-            <h1>Type: <%=Pokemon.type%></h1>
-            <h1>HP: <%=Pokemon.stats.hp%></h1>
-            <h1>Attack: <%=Pokemon.stats.attack%></h1>
-            <h1>Defense: <%=Pokemon.stats.defense%></h1>
-    </tbody>
-    <a href="/pokemon/edit/<%=Pokemon.id%>"><button>Edit Poke</button></a>
+<link rel="stylesheet" href="/style.css">
+<div class="header">
+    <h1>Pokedex</h1>
+    <h1><%= poke.name %></h1>
+</div>
+<div class="show">
+    <h2>Poke ID: <%= poke.id %></h2>
+    <img src="<%= poke.img %>" alt="<%= poke.name %>" class="show">
+    <h2><%= poke.name %></h2>
+    <h2>HP: <%= poke.stats.hp %></h2>
+    <h2>Attack: <%= poke.stats.attack %></h2>
+    <h2>Defense: <%= poke.stats.defense %></h2>
+    <div class="types">
 
-    <form action="/pokemon/<%=Pokemon.id%>?_method=DELETE" method="POST">
-
-        <a href="/pokemon/<%=Pokemon.id%>"><button >Delete Poke</button></a>
-    </form>
-</body>
-</html>
+    <% poke.type.forEach(t=>{ %>
+        <p class="type" id="<%= t %>"> Types: <%= t %></p>
+    <% }) %>
+</div>
+    <a href="/pokemon"><button>back</button></a>
+</div>

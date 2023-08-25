@@ -1,0 +1,65 @@
+
+#pokemonList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the column width as needed */
+    gap: 20px; /* Add some spacing between cards */
+  }
+  
+  /* Style individual Pokemon cards */
+  .pokemon-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add hover effect for cards */
+  .pokemon-card:hover {
+    transform: scale(1.05); /* Increase card size on hover */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Add this CSS to your style.css file */
+
+/* Style the Delete and Edit buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px; /* Add spacing between cards */
+  }
+  
+  form[action^="/pokemon/"] input[type="submit"],
+  a[href^="/pokemon/"] button {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px; /* Add spacing between buttons */
+  }
+  
+  /* Hover effect for buttons */
+  form[action^="/pokemon/"] input[type="submit"]:hover,
+  a[href^="/pokemon/"] button:hover {
+    filter: brightness(1.2); /* Brighten the button on hover */
+  }
+
+  /* Add this CSS to your style.css file */
+
+/* Style the "Add New Pokemon" button */
+.newPokemon {
+    background-color: #27ae60; /* Green color, you can change it to your preferred color */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjust the padding to change the button's height */
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for the button */
+  .newPokemon:hover {
+    filter: brightness(1.2); /* Brighten the button on hover */
+  }
+ 
